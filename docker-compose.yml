@@ -1,4 +1,12 @@
-db:
-  build: .
-  ports:
-    - :5432
+version: '2'
+services:
+
+  postgres-ssl:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        http_proxy:
+    image: muccg/postgres-ssl
+    ports:
+      - 5432:5432
