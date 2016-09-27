@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# create self signed cert
 cd $PGDATA
-openssl req -new -newkey rsa:1024 -days 365000 -nodes -x509 -keyout server.key -subj "/CN=PostgreSQL" -out server.crt
+cp /etc/ssl/certs/ssl-cert-snakeoil.pem $PGDATA/server.crt
+cp /etc/ssl/private/ssl-cert-snakeoil.key $PGDATA/server.key
 chmod og-rwx server.key
 chown -R postgres:postgres $PGDATA
 
