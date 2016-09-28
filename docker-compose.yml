@@ -7,6 +7,7 @@ services:
       dockerfile: Dockerfile
       args:
         http_proxy:
-    image: muccg/postgres-ssl
     ports:
       - 5432:5432
+    volumes:
+      - ./:/tmpmount

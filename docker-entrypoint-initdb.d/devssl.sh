@@ -1,6 +1,9 @@
 #!/bin/bash
 
 cd $PGDATA
+hostname -f
+make-ssl-cert generate-default-snakeoil --force-overwrite
+openssl x509 -noout -subject -in /etc/ssl/certs/ssl-cert-snakeoil.pem
 cp /etc/ssl/certs/ssl-cert-snakeoil.pem $PGDATA/server.crt
 cp /etc/ssl/private/ssl-cert-snakeoil.key $PGDATA/server.key
 chmod og-rwx server.key
