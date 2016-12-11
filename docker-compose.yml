@@ -1,7 +1,17 @@
 version: '2'
 services:
 
-  postgres-ssl:
-      image: muccg/postgres-ssl:latest
+  '9.4':
+    image: muccg/postgres-ssl:9.4
     ports:
       - 5432:5432
+
+  '9.5':
+    image: muccg/postgres-ssl:9.5
+    ports:
+      - 5433:5432
+
+  '9.6':
+    image: muccg/postgres-ssl:9.6
+    ports:
+      - 5434:5432
