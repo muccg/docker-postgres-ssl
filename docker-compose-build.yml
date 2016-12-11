@@ -1,0 +1,21 @@
+version: '2'
+services:
+
+  dev:
+    build:
+      context: ./
+      args:
+        http_proxy:
+    image: muccg/postgres-ssl:${GIT_BRANCH}
+
+  prod:
+    extends:
+      file: docker-compose-build.yml
+      service: dev
+    image: muccg/postgres-ssl:9.4
+
+  latest:
+    extends:
+      file: docker-compose-build.yml
+      service: dev
+    image: muccg/postgres-ssl:latest

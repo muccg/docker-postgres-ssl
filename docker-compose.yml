@@ -2,11 +2,6 @@ version: '2'
 services:
 
   postgres-ssl:
-    build:
-      context: ./
-      dockerfile: Dockerfile
-      args:
-        http_proxy:
-    image: muccg/postgres-ssl
+      image: muccg/postgres-ssl:latest
     ports:
       - 5432:5432
