@@ -1,3 +1,5 @@
+# Postgres with ssl enabled
+# Uses a self signed cert, not for production use
 FROM postgres:9.6
 LABEL maintainer "https://github.com/muccg/"
 
