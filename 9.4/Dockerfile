@@ -1,5 +1,5 @@
 FROM postgres:9.4
-MAINTAINER https://github.com/muccg/
+LABEL maintainer "https://github.com/muccg/"
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
