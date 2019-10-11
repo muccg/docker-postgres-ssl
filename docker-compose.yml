@@ -15,3 +15,8 @@ services:
     image: muccg/postgres-ssl:9.6
     ports:
       - 5434:5432
+
+  '11.1':
+    image: muccg/postgres-ssl:11.1
+    ports:
+      - 5435:5432
